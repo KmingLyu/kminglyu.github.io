@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>ryCh 9 dh207 Hypothesis Testing | dh207</title>
+  <meta name="description" content="輸出格式 bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="ryCh 9 dh207 Hypothesis Testing | dh207" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="輸出格式 bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ryCh 9 dh207 Hypothesis Testing | dh207" />
+  
+  <meta name="twitter:description" content="輸出格式 bookdown::gitbook." />
+  
+
+<meta name="author" content="Renyuan" />
+
+
+<meta name="date" content="2022-06-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="dh201-ch01-course-introduction-bootcamps.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"> ryLの小書_aMinimalBookExample</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>預備動作</a></li>
+<li class="chapter" data-level="1" data-path="ryCh01.html"><a href="ryCh01.html"><i class="fa fa-check"></i><b>1</b> ryCh01 Chapter 1 Probability Basics</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="ryCh01.html"><a href="ryCh01.html#exercises"><i class="fa fa-check"></i><b>1.1</b> Exercises</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="ryCh01.html"><a href="ryCh01.html#prob"><i class="fa fa-check"></i><b>1.1.1</b> prob</a></li>
+<li class="chapter" data-level="1.1.2" data-path="ryCh01.html"><a href="ryCh01.html#prob-1"><i class="fa fa-check"></i><b>1.1.2</b> prob</a></li>
+<li class="chapter" data-level="1.1.3" data-path="ryCh01.html"><a href="ryCh01.html#prob-2"><i class="fa fa-check"></i><b>1.1.3</b> prob</a></li>
+<li class="chapter" data-level="1.1.4" data-path="ryCh01.html"><a href="ryCh01.html#prob-3"><i class="fa fa-check"></i><b>1.1.4</b> prob</a></li>
+<li class="chapter" data-level="1.1.5" data-path="ryCh01.html"><a href="ryCh01.html#prob-4"><i class="fa fa-check"></i><b>1.1.5</b> prob</a></li>
+<li class="chapter" data-level="1.1.6" data-path="ryCh01.html"><a href="ryCh01.html#prob-5"><i class="fa fa-check"></i><b>1.1.6</b> prob</a></li>
+<li class="chapter" data-level="1.1.7" data-path="ryCh01.html"><a href="ryCh01.html#prob-6"><i class="fa fa-check"></i><b>1.1.7</b> prob</a></li>
+<li class="chapter" data-level="1.1.8" data-path="ryCh01.html"><a href="ryCh01.html#prob-7"><i class="fa fa-check"></i><b>1.1.8</b> prob</a></li>
+<li class="chapter" data-level="1.1.9" data-path="ryCh01.html"><a href="ryCh01.html#prob-8"><i class="fa fa-check"></i><b>1.1.9</b> prob</a></li>
+<li class="chapter" data-level="1.1.10" data-path="ryCh01.html"><a href="ryCh01.html#prob-9"><i class="fa fa-check"></i><b>1.1.10</b> prob</a></li>
+<li class="chapter" data-level="1.1.11" data-path="ryCh01.html"><a href="ryCh01.html#prob-10"><i class="fa fa-check"></i><b>1.1.11</b> prob</a></li>
+<li class="chapter" data-level="1.1.12" data-path="ryCh01.html"><a href="ryCh01.html#prob-11"><i class="fa fa-check"></i><b>1.1.12</b> prob</a></li>
+<li class="chapter" data-level="1.1.13" data-path="ryCh01.html"><a href="ryCh01.html#prob-12"><i class="fa fa-check"></i><b>1.1.13</b> prob</a></li>
+<li class="chapter" data-level="1.1.14" data-path="ryCh01.html"><a href="ryCh01.html#prob-13"><i class="fa fa-check"></i><b>1.1.14</b> prob</a></li>
+<li class="chapter" data-level="1.1.15" data-path="ryCh01.html"><a href="ryCh01.html#prob-14"><i class="fa fa-check"></i><b>1.1.15</b> prob</a></li>
+<li class="chapter" data-level="1.1.16" data-path="ryCh01.html"><a href="ryCh01.html#prob-15"><i class="fa fa-check"></i><b>1.1.16</b> prob</a></li>
+<li class="chapter" data-level="1.1.17" data-path="ryCh01.html"><a href="ryCh01.html#prob-16"><i class="fa fa-check"></i><b>1.1.17</b> prob</a></li>
+<li class="chapter" data-level="1.1.18" data-path="ryCh01.html"><a href="ryCh01.html#prob-17"><i class="fa fa-check"></i><b>1.1.18</b> prob</a></li>
+<li class="chapter" data-level="1.1.19" data-path="ryCh01.html"><a href="ryCh01.html#prob-18"><i class="fa fa-check"></i><b>1.1.19</b> prob</a></li>
+<li class="chapter" data-level="1.1.20" data-path="ryCh01.html"><a href="ryCh01.html#prob-19"><i class="fa fa-check"></i><b>1.1.20</b> prob</a></li>
+<li class="chapter" data-level="1.1.21" data-path="ryCh01.html"><a href="ryCh01.html#prob-20"><i class="fa fa-check"></i><b>1.1.21</b> prob</a></li>
+<li class="chapter" data-level="1.1.22" data-path="ryCh01.html"><a href="ryCh01.html#prob-21"><i class="fa fa-check"></i><b>1.1.22</b> prob</a></li>
+<li class="chapter" data-level="1.1.23" data-path="ryCh01.html"><a href="ryCh01.html#prob-22"><i class="fa fa-check"></i><b>1.1.23</b> prob</a></li>
+<li class="chapter" data-level="1.1.24" data-path="ryCh01.html"><a href="ryCh01.html#prob-23"><i class="fa fa-check"></i><b>1.1.24</b> prob</a></li>
+<li class="chapter" data-level="1.1.25" data-path="ryCh01.html"><a href="ryCh01.html#prob-24"><i class="fa fa-check"></i><b>1.1.25</b> prob</a></li>
+<li class="chapter" data-level="1.1.26" data-path="ryCh01.html"><a href="ryCh01.html#prob-25"><i class="fa fa-check"></i><b>1.1.26</b> prob</a></li>
+<li class="chapter" data-level="1.1.27" data-path="ryCh01.html"><a href="ryCh01.html#prob-26"><i class="fa fa-check"></i><b>1.1.27</b> prob</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rych02-chapter-2.html"><a href="rych02-chapter-2.html"><i class="fa fa-check"></i><b>2</b> ryCh02 Chapter 2</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="rych02-chapter-2.html"><a href="rych02-chapter-2.html#exercises-1"><i class="fa fa-check"></i><b>2.1</b> Exercises</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="rych02-chapter-2.html"><a href="rych02-chapter-2.html#prob-27"><i class="fa fa-check"></i><b>2.1.1</b> prob</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="rych03-chapter-3.html"><a href="rych03-chapter-3.html"><i class="fa fa-check"></i><b>3</b> ryCh03 Chapter 3</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="rych03-chapter-3.html"><a href="rych03-chapter-3.html#exercises-2"><i class="fa fa-check"></i><b>3.1</b> Exercises</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="rych03-chapter-3.html"><a href="rych03-chapter-3.html#prob-28"><i class="fa fa-check"></i><b>3.1.1</b> prob</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ryCh04.html"><a href="ryCh04.html"><i class="fa fa-check"></i><b>4</b> ryCh04 Chapter 4 Distributions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ryCh04.html"><a href="ryCh04.html#exercises-3"><i class="fa fa-check"></i><b>4.1</b> Exercises</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="ryCh04.html"><a href="ryCh04.html#prob-29"><i class="fa fa-check"></i><b>4.1.1</b> prob</a></li>
+<li class="chapter" data-level="4.1.2" data-path="ryCh04.html"><a href="ryCh04.html#prob-30"><i class="fa fa-check"></i><b>4.1.2</b> prob</a></li>
+<li class="chapter" data-level="4.1.3" data-path="ryCh04.html"><a href="ryCh04.html#prob-31"><i class="fa fa-check"></i><b>4.1.3</b> prob</a></li>
+<li class="chapter" data-level="4.1.4" data-path="ryCh04.html"><a href="ryCh04.html#prob-32"><i class="fa fa-check"></i><b>4.1.4</b> prob</a></li>
+<li class="chapter" data-level="4.1.5" data-path="ryCh04.html"><a href="ryCh04.html#prob-33"><i class="fa fa-check"></i><b>4.1.5</b> prob</a></li>
+<li class="chapter" data-level="4.1.6" data-path="ryCh04.html"><a href="ryCh04.html#prob-34"><i class="fa fa-check"></i><b>4.1.6</b> prob</a></li>
+<li class="chapter" data-level="4.1.7" data-path="ryCh04.html"><a href="ryCh04.html#prob-35"><i class="fa fa-check"></i><b>4.1.7</b> prob</a></li>
+<li class="chapter" data-level="4.1.8" data-path="ryCh04.html"><a href="ryCh04.html#prob-36"><i class="fa fa-check"></i><b>4.1.8</b> prob</a></li>
+<li class="chapter" data-level="4.1.9" data-path="ryCh04.html"><a href="ryCh04.html#prob-37"><i class="fa fa-check"></i><b>4.1.9</b> prob</a></li>
+<li class="chapter" data-level="4.1.10" data-path="ryCh04.html"><a href="ryCh04.html#prob-38"><i class="fa fa-check"></i><b>4.1.10</b> prob</a></li>
+<li class="chapter" data-level="4.1.11" data-path="ryCh04.html"><a href="ryCh04.html#prob-39"><i class="fa fa-check"></i><b>4.1.11</b> prob</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="rych05-chapter-5.html"><a href="rych05-chapter-5.html"><i class="fa fa-check"></i><b>5</b> ryCh05 Chapter 5</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="rych05-chapter-5.html"><a href="rych05-chapter-5.html#exercises-4"><i class="fa fa-check"></i><b>5.1</b> Exercises</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="rych05-chapter-5.html"><a href="rych05-chapter-5.html#prob-40"><i class="fa fa-check"></i><b>5.1.1</b> prob</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="rych06-chapter-6.html"><a href="rych06-chapter-6.html"><i class="fa fa-check"></i><b>6</b> ryCh06 Chapter 6</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="rych06-chapter-6.html"><a href="rych06-chapter-6.html#exercises-5"><i class="fa fa-check"></i><b>6.1</b> Exercises</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="rych06-chapter-6.html"><a href="rych06-chapter-6.html#prob-41"><i class="fa fa-check"></i><b>6.1.1</b> prob</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="ryCh07.html"><a href="ryCh07.html"><i class="fa fa-check"></i><b>7</b> ryCh07 Chapter 7 Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="ryCh07.html"><a href="ryCh07.html#exercises-6"><i class="fa fa-check"></i><b>7.1</b> Exercises</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="ryCh07.html"><a href="ryCh07.html#prob-42"><i class="fa fa-check"></i><b>7.1.1</b> prob</a></li>
+<li class="chapter" data-level="7.1.2" data-path="ryCh07.html"><a href="ryCh07.html#prob-43"><i class="fa fa-check"></i><b>7.1.2</b> prob</a></li>
+<li class="chapter" data-level="7.1.3" data-path="ryCh07.html"><a href="ryCh07.html#prob-44"><i class="fa fa-check"></i><b>7.1.3</b> prob</a></li>
+<li class="chapter" data-level="7.1.4" data-path="ryCh07.html"><a href="ryCh07.html#prob-45"><i class="fa fa-check"></i><b>7.1.4</b> prob</a></li>
+<li class="chapter" data-level="7.1.5" data-path="ryCh07.html"><a href="ryCh07.html#prob-46"><i class="fa fa-check"></i><b>7.1.5</b> prob</a></li>
+<li class="chapter" data-level="7.1.6" data-path="ryCh07.html"><a href="ryCh07.html#prob-47"><i class="fa fa-check"></i><b>7.1.6</b> prob</a></li>
+<li class="chapter" data-level="7.1.7" data-path="ryCh07.html"><a href="ryCh07.html#prob-48"><i class="fa fa-check"></i><b>7.1.7</b> prob</a></li>
+<li class="chapter" data-level="7.1.8" data-path="ryCh07.html"><a href="ryCh07.html#prob-49"><i class="fa fa-check"></i><b>7.1.8</b> prob</a></li>
+<li class="chapter" data-level="7.1.9" data-path="ryCh07.html"><a href="ryCh07.html#prob-50"><i class="fa fa-check"></i><b>7.1.9</b> prob</a></li>
+<li class="chapter" data-level="7.1.10" data-path="ryCh07.html"><a href="ryCh07.html#prob-51"><i class="fa fa-check"></i><b>7.1.10</b> prob</a></li>
+<li class="chapter" data-level="7.1.11" data-path="ryCh07.html"><a href="ryCh07.html#prob-52"><i class="fa fa-check"></i><b>7.1.11</b> prob</a></li>
+<li class="chapter" data-level="7.1.12" data-path="ryCh07.html"><a href="ryCh07.html#prob-53"><i class="fa fa-check"></i><b>7.1.12</b> prob</a></li>
+<li class="chapter" data-level="7.1.13" data-path="ryCh07.html"><a href="ryCh07.html#prob-54"><i class="fa fa-check"></i><b>7.1.13</b> prob</a></li>
+<li class="chapter" data-level="7.1.14" data-path="ryCh07.html"><a href="ryCh07.html#prob-55"><i class="fa fa-check"></i><b>7.1.14</b> prob</a></li>
+<li class="chapter" data-level="7.1.15" data-path="ryCh07.html"><a href="ryCh07.html#prob-56"><i class="fa fa-check"></i><b>7.1.15</b> prob</a></li>
+<li class="chapter" data-level="7.1.16" data-path="ryCh07.html"><a href="ryCh07.html#prob-57"><i class="fa fa-check"></i><b>7.1.16</b> prob</a></li>
+<li class="chapter" data-level="7.1.17" data-path="ryCh07.html"><a href="ryCh07.html#prob-58"><i class="fa fa-check"></i><b>7.1.17</b> prob</a></li>
+<li class="chapter" data-level="7.1.18" data-path="ryCh07.html"><a href="ryCh07.html#prob-59"><i class="fa fa-check"></i><b>7.1.18</b> prob</a></li>
+<li class="chapter" data-level="7.1.19" data-path="ryCh07.html"><a href="ryCh07.html#prob-60"><i class="fa fa-check"></i><b>7.1.19</b> prob</a></li>
+<li class="chapter" data-level="7.1.20" data-path="ryCh07.html"><a href="ryCh07.html#prob-61"><i class="fa fa-check"></i><b>7.1.20</b> prob</a></li>
+<li class="chapter" data-level="7.1.21" data-path="ryCh07.html"><a href="ryCh07.html#prob-62"><i class="fa fa-check"></i><b>7.1.21</b> prob</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html"><i class="fa fa-check"></i><b>8</b> dh201 ch01 Course Introduction + Bootcamps</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#lesson-1.1-introduction-to-probability-and-statistics"><i class="fa fa-check"></i><b>8.1</b> Lesson 1.1 — Introduction to Probability and Statistics</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#mathematical-models-for-describing-observable-phenomena"><i class="fa fa-check"></i><b>8.1.1</b> Mathematical Models for describing observable phenomena:</a></li>
+<li class="chapter" data-level="8.1.2" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#some-cool-examples"><i class="fa fa-check"></i><b>8.1.2</b> Some Cool Examples</a></li>
+<li class="chapter" data-level="8.1.3" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#working-definitions"><i class="fa fa-check"></i><b>8.1.3</b> Working Definitions</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#lesson-1.2-the-joy-of-sets-bootcamp"><i class="fa fa-check"></i><b>8.2</b> Lesson 1.2 — The Joy of Sets Bootcamp</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#definition"><i class="fa fa-check"></i><b>8.2.1</b> Definition:</a></li>
+<li class="chapter" data-level="8.2.2" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#notation"><i class="fa fa-check"></i><b>8.2.2</b> Notation:</a></li>
+<li class="chapter" data-level="8.2.3" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#examples"><i class="fa fa-check"></i><b>8.2.3</b> Examples:</a></li>
+<li class="chapter" data-level="8.2.4" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#definition-1"><i class="fa fa-check"></i><b>8.2.4</b> Definition:</a></li>
+<li class="chapter" data-level="8.2.5" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#definition-2"><i class="fa fa-check"></i><b>8.2.5</b> Definition:</a></li>
+<li class="chapter" data-level="8.2.6" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#properties"><i class="fa fa-check"></i><b>8.2.6</b> Properties:</a></li>
+<li class="chapter" data-level="8.2.7" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#remark"><i class="fa fa-check"></i><b>8.2.7</b> Remark:</a></li>
+<li class="chapter" data-level="8.2.8" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#definitions"><i class="fa fa-check"></i><b>8.2.8</b> Definitions:</a></li>
+<li class="chapter" data-level="8.2.9" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#remark-1"><i class="fa fa-check"></i><b>8.2.9</b> Remark:</a></li>
+<li class="chapter" data-level="8.2.10" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#example"><i class="fa fa-check"></i><b>8.2.10</b> Example:</a></li>
+<li class="chapter" data-level="8.2.11" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#definition-3"><i class="fa fa-check"></i><b>8.2.11</b> Definition:</a></li>
+<li class="chapter" data-level="8.2.12" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#definitions-1"><i class="fa fa-check"></i><b>8.2.12</b> Definitions:</a></li>
+<li class="chapter" data-level="8.2.13" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#examples-1"><i class="fa fa-check"></i><b>8.2.13</b> Examples:</a></li>
+<li class="chapter" data-level="8.2.14" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#laws-of-operation"><i class="fa fa-check"></i><b>8.2.14</b> Laws of Operation:</a></li>
+<li class="chapter" data-level="8.2.15" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#proofs"><i class="fa fa-check"></i><b>8.2.15</b> Proofs:</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#lesson-1.3-calculus-bootcamp-introduction-derivatives"><i class="fa fa-check"></i><b>8.3</b> Lesson 1.3 — Calculus Bootcamp: Introduction + Derivatives</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide"><i class="fa fa-check"></i><b>8.3.1</b> slide</a></li>
+<li class="chapter" data-level="8.3.2" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-1"><i class="fa fa-check"></i><b>8.3.2</b> slide</a></li>
+<li class="chapter" data-level="8.3.3" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-2"><i class="fa fa-check"></i><b>8.3.3</b> slide</a></li>
+<li class="chapter" data-level="8.3.4" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-3"><i class="fa fa-check"></i><b>8.3.4</b> slide</a></li>
+<li class="chapter" data-level="8.3.5" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-4"><i class="fa fa-check"></i><b>8.3.5</b> slide</a></li>
+<li class="chapter" data-level="8.3.6" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-5"><i class="fa fa-check"></i><b>8.3.6</b> slide</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#lesson-1.4-calculus-bootcamp-integration-and-beyond"><i class="fa fa-check"></i><b>8.4</b> Lesson 1.4 — Calculus Bootcamp: Integration and Beyond</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-6"><i class="fa fa-check"></i><b>8.4.1</b> slide</a></li>
+<li class="chapter" data-level="8.4.2" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-7"><i class="fa fa-check"></i><b>8.4.2</b> slide</a></li>
+<li class="chapter" data-level="8.4.3" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-8"><i class="fa fa-check"></i><b>8.4.3</b> slide</a></li>
+<li class="chapter" data-level="8.4.4" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-9"><i class="fa fa-check"></i><b>8.4.4</b> slide</a></li>
+<li class="chapter" data-level="8.4.5" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-10"><i class="fa fa-check"></i><b>8.4.5</b> slide</a></li>
+<li class="chapter" data-level="8.4.6" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-11"><i class="fa fa-check"></i><b>8.4.6</b> slide</a></li>
+<li class="chapter" data-level="8.4.7" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-12"><i class="fa fa-check"></i><b>8.4.7</b> slide</a></li>
+<li class="chapter" data-level="8.4.8" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-13"><i class="fa fa-check"></i><b>8.4.8</b> slide</a></li>
+<li class="chapter" data-level="8.4.9" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-14"><i class="fa fa-check"></i><b>8.4.9</b> slide</a></li>
+<li class="chapter" data-level="8.4.10" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-15"><i class="fa fa-check"></i><b>8.4.10</b> slide</a></li>
+<li class="chapter" data-level="8.4.11" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-16"><i class="fa fa-check"></i><b>8.4.11</b> slide</a></li>
+<li class="chapter" data-level="8.4.12" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-17"><i class="fa fa-check"></i><b>8.4.12</b> slide</a></li>
+<li class="chapter" data-level="8.4.13" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-18"><i class="fa fa-check"></i><b>8.4.13</b> slide</a></li>
+<li class="chapter" data-level="8.4.14" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#slide-19"><i class="fa fa-check"></i><b>8.4.14</b> slide</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="dh201-ch01-course-introduction-bootcamps.html"><a href="dh201-ch01-course-introduction-bootcamps.html#以下空白"><i class="fa fa-check"></i><b>8.5</b> 以下空白</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html"><i class="fa fa-check"></i><b>9</b> dh207 Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#introduction-to-hypothesis-testing"><i class="fa fa-check"></i><b>9.1</b> Introduction to Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#goal"><i class="fa fa-check"></i><b>9.1.1</b> Goal:</a></li>
+<li class="chapter" data-level="9.1.2" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#general-approach"><i class="fa fa-check"></i><b>9.1.2</b> General Approach:</a></li>
+<li class="chapter" data-level="9.1.3" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#slide-20"><i class="fa fa-check"></i><b>9.1.3</b> slide</a></li>
+<li class="chapter" data-level="9.1.4" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#slide-21"><i class="fa fa-check"></i><b>9.1.4</b> slide</a></li>
+<li class="chapter" data-level="9.1.5" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#slide-22"><i class="fa fa-check"></i><b>9.1.5</b> slide</a></li>
+<li class="chapter" data-level="9.1.6" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#slide-23"><i class="fa fa-check"></i><b>9.1.6</b> slide</a></li>
+<li class="chapter" data-level="9.1.7" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#slide-24"><i class="fa fa-check"></i><b>9.1.7</b> slide</a></li>
+<li class="chapter" data-level="9.1.8" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#slide-25"><i class="fa fa-check"></i><b>9.1.8</b> slide</a></li>
+<li class="chapter" data-level="9.1.9" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#slide-26"><i class="fa fa-check"></i><b>9.1.9</b> slide</a></li>
+<li class="chapter" data-level="9.1.10" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#slide-27"><i class="fa fa-check"></i><b>9.1.10</b> slide</a></li>
+<li class="chapter" data-level="9.1.11" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#slide-28"><i class="fa fa-check"></i><b>9.1.11</b> slide</a></li>
+<li class="chapter" data-level="9.1.12" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#slide-29"><i class="fa fa-check"></i><b>9.1.12</b> slide</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#the-errors-of-our-ways"><i class="fa fa-check"></i><b>9.2</b> The Errors of Our Ways</a></li>
+<li class="chapter" data-level="9.3" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#normal-mean-test-with-known-variance"><i class="fa fa-check"></i><b>9.3</b> Normal Mean Test with Known Variance</a></li>
+<li class="chapter" data-level="9.4" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#normal-mean-test-with-known-variance-design"><i class="fa fa-check"></i><b>9.4</b> Normal Mean Test with Known Variance: Design</a></li>
+<li class="chapter" data-level="9.5" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#two-sample-normal-means-test-with-known-variances"><i class="fa fa-check"></i><b>9.5</b> Two-Sample Normal Means Test with Known Variances</a></li>
+<li class="chapter" data-level="9.6" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#normal-mean-test-with-unknown-variance"><i class="fa fa-check"></i><b>9.6</b> Normal Mean Test with Unknown Variance</a></li>
+<li class="chapter" data-level="9.7" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#two-sample-normal-means-tests-with-unknown-variances"><i class="fa fa-check"></i><b>9.7</b> Two-Sample Normal Means Tests with Unknown Variances</a></li>
+<li class="chapter" data-level="9.8" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#two-sample-normal-means-test-with-paired-observations"><i class="fa fa-check"></i><b>9.8</b> Two-Sample Normal Means Test with Paired Observations</a></li>
+<li class="chapter" data-level="9.9" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#normal-variance-test"><i class="fa fa-check"></i><b>9.9</b> Normal Variance Test</a></li>
+<li class="chapter" data-level="9.10" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#two-sample-normal-variances-test"><i class="fa fa-check"></i><b>9.10</b> Two-Sample Normal Variances Test</a></li>
+<li class="chapter" data-level="9.11" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#bernoulli-proportion-test"><i class="fa fa-check"></i><b>9.11</b> Bernoulli Proportion Test</a></li>
+<li class="chapter" data-level="9.12" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#two-sample-bernoulli-proportions-test"><i class="fa fa-check"></i><b>9.12</b> Two-Sample Bernoulli Proportions Test</a></li>
+<li class="chapter" data-level="9.13" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#goodness-of-fit-tests-introduction"><i class="fa fa-check"></i><b>9.13</b> Goodness-of-Fit Tests: Introduction</a></li>
+<li class="chapter" data-level="9.14" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#goodness-of-fit-tests-examples"><i class="fa fa-check"></i><b>9.14</b> Goodness-of-Fit Tests: Examples</a></li>
+<li class="chapter" data-level="9.15" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#goodness-of-fit-tests-honors-exampl"><i class="fa fa-check"></i><b>9.15</b> Goodness-of-Fit Tests: Honors Exampl</a></li>
+<li class="chapter" data-level="9.16" data-path="dh207-hypothesis-testing.html"><a href="dh207-hypothesis-testing.html#以下空白-1"><i class="fa fa-check"></i><b>9.16</b> 以下空白</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">dh207</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="dh207-hypothesis-testing" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">ryCh 9</span> dh207 Hypothesis Testing<a href="dh207-hypothesis-testing.html#dh207-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<div id="introduction-to-hypothesis-testing" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Introduction to Hypothesis Testing<a href="dh207-hypothesis-testing.html#introduction-to-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="goal" class="section level3 hasAnchor" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> Goal:<a href="dh207-hypothesis-testing.html#goal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We’ll study a population by collecting data and making sound, statistically valid conclusions about that population based on data that we collect.</p>
+</div>
+<div id="general-approach" class="section level3 hasAnchor" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> General Approach:<a href="dh207-hypothesis-testing.html#general-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>State a hypothesis.</p></li>
+<li><p>Select a test statistic (to test whether or not the hypothesis is true).</p></li>
+<li><p>Evaluate (calculate) the test statistic based on observations that we take.</p></li>
+<li><p>Interpret results — does the test statistic suggest that you reject or fail to reject your hypothesis?</p></li>
+</ul>
+</div>
+<div id="slide-20" class="section level3 hasAnchor" number="9.1.3">
+<h3><span class="header-section-number">9.1.3</span> slide<a href="dh207-hypothesis-testing.html#slide-20" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/paste-72BA2FF8.png" /></p>
+</div>
+<div id="slide-21" class="section level3 hasAnchor" number="9.1.4">
+<h3><span class="header-section-number">9.1.4</span> slide<a href="dh207-hypothesis-testing.html#slide-21" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/paste-18FF0BAE.png" /></p>
+</div>
+<div id="slide-22" class="section level3 hasAnchor" number="9.1.5">
+<h3><span class="header-section-number">9.1.5</span> slide<a href="dh207-hypothesis-testing.html#slide-22" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/paste-C7FADE94.png" /></p>
+</div>
+<div id="slide-23" class="section level3 hasAnchor" number="9.1.6">
+<h3><span class="header-section-number">9.1.6</span> slide<a href="dh207-hypothesis-testing.html#slide-23" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/paste-7CE87126.png" /></p>
+</div>
+<div id="slide-24" class="section level3 hasAnchor" number="9.1.7">
+<h3><span class="header-section-number">9.1.7</span> slide<a href="dh207-hypothesis-testing.html#slide-24" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/paste-B70AA237.png" /></p>
+</div>
+<div id="slide-25" class="section level3 hasAnchor" number="9.1.8">
+<h3><span class="header-section-number">9.1.8</span> slide<a href="dh207-hypothesis-testing.html#slide-25" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/paste-85649EF7.png" /></p>
+</div>
+<div id="slide-26" class="section level3 hasAnchor" number="9.1.9">
+<h3><span class="header-section-number">9.1.9</span> slide<a href="dh207-hypothesis-testing.html#slide-26" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/paste-238ADDCD.png" /></p>
+</div>
+<div id="slide-27" class="section level3 hasAnchor" number="9.1.10">
+<h3><span class="header-section-number">9.1.10</span> slide<a href="dh207-hypothesis-testing.html#slide-27" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/paste-EDC1B89D.png" /></p>
+</div>
+<div id="slide-28" class="section level3 hasAnchor" number="9.1.11">
+<h3><span class="header-section-number">9.1.11</span> slide<a href="dh207-hypothesis-testing.html#slide-28" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/paste-891C6365.png" /></p>
+</div>
+<div id="slide-29" class="section level3 hasAnchor" number="9.1.12">
+<h3><span class="header-section-number">9.1.12</span> slide<a href="dh207-hypothesis-testing.html#slide-29" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/paste-F69DAE32.png" /></p>
+</div>
+</div>
+<div id="the-errors-of-our-ways" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> The Errors of Our Ways<a href="dh207-hypothesis-testing.html#the-errors-of-our-ways" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="normal-mean-test-with-known-variance" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Normal Mean Test with Known Variance<a href="dh207-hypothesis-testing.html#normal-mean-test-with-known-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="normal-mean-test-with-known-variance-design" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Normal Mean Test with Known Variance: Design<a href="dh207-hypothesis-testing.html#normal-mean-test-with-known-variance-design" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="two-sample-normal-means-test-with-known-variances" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Two-Sample Normal Means Test with Known Variances<a href="dh207-hypothesis-testing.html#two-sample-normal-means-test-with-known-variances" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="normal-mean-test-with-unknown-variance" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> Normal Mean Test with Unknown Variance<a href="dh207-hypothesis-testing.html#normal-mean-test-with-unknown-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="two-sample-normal-means-tests-with-unknown-variances" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> Two-Sample Normal Means Tests with Unknown Variances<a href="dh207-hypothesis-testing.html#two-sample-normal-means-tests-with-unknown-variances" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="two-sample-normal-means-test-with-paired-observations" class="section level2 hasAnchor" number="9.8">
+<h2><span class="header-section-number">9.8</span> Two-Sample Normal Means Test with Paired Observations<a href="dh207-hypothesis-testing.html#two-sample-normal-means-test-with-paired-observations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="normal-variance-test" class="section level2 hasAnchor" number="9.9">
+<h2><span class="header-section-number">9.9</span> Normal Variance Test<a href="dh207-hypothesis-testing.html#normal-variance-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="two-sample-normal-variances-test" class="section level2 hasAnchor" number="9.10">
+<h2><span class="header-section-number">9.10</span> Two-Sample Normal Variances Test<a href="dh207-hypothesis-testing.html#two-sample-normal-variances-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="bernoulli-proportion-test" class="section level2 hasAnchor" number="9.11">
+<h2><span class="header-section-number">9.11</span> Bernoulli Proportion Test<a href="dh207-hypothesis-testing.html#bernoulli-proportion-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="two-sample-bernoulli-proportions-test" class="section level2 hasAnchor" number="9.12">
+<h2><span class="header-section-number">9.12</span> Two-Sample Bernoulli Proportions Test<a href="dh207-hypothesis-testing.html#two-sample-bernoulli-proportions-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="goodness-of-fit-tests-introduction" class="section level2 hasAnchor" number="9.13">
+<h2><span class="header-section-number">9.13</span> Goodness-of-Fit Tests: Introduction<a href="dh207-hypothesis-testing.html#goodness-of-fit-tests-introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="goodness-of-fit-tests-examples" class="section level2 hasAnchor" number="9.14">
+<h2><span class="header-section-number">9.14</span> Goodness-of-Fit Tests: Examples<a href="dh207-hypothesis-testing.html#goodness-of-fit-tests-examples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="goodness-of-fit-tests-honors-exampl" class="section level2 hasAnchor" number="9.15">
+<h2><span class="header-section-number">9.15</span> Goodness-of-Fit Tests: Honors Exampl<a href="dh207-hypothesis-testing.html#goodness-of-fit-tests-honors-exampl" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="以下空白-1" class="section level2 hasAnchor" number="9.16">
+<h2><span class="header-section-number">9.16</span> 以下空白<a href="dh207-hypothesis-testing.html#以下空白-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="dh201-ch01-course-introduction-bootcamps.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/dh207.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ryBk.pdf", "ryBk.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
