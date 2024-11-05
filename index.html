@@ -3,10 +3,407 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>呂可名的個人網頁</title>
+    <script
+      src="https://kit.fontawesome.com/8fe400fa8e.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* 主題切換按鈕 */
+      .theme-switch {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: inherit;
+      }
+    </style>
   </head>
   <body>
-    <h1>呂可名的個人網頁</h1>
+    <header>
+      <div class="header">
+        <!-- <div class="header__logo-box"> -->
+        <!-- <div class="header__logo">logo</div> -->
+        <!-- </div> -->
+
+        <div class="header__nav">
+          <div class="header__nav-item"><a href="#home">首頁</a></div>
+          <div class="header__nav-item"><a href="#experience">關於我</a></div>
+          <div class="header__nav-item"><a href="#project">作品集</a></div>
+          <!-- 主題切換按鈕 -->
+          <!-- <div class="header__nav-item">
+            <button class="theme-switch" id="theme-switch">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="home" id="home">
+        <div class="home__inner">
+          <div class="home__innerbox">
+            <div class="home__intro">
+              <h1>
+                呂可名 <br />
+                Keming Lyu
+              </h1>
+              <br />
+              <p>
+                畢業於長庚大學資訊工程學系研究所。曾參與網頁前後端開發、資料庫設計以及AI
+                模型訓練部屬。
+              </p>
+            </div>
+            <div class="home__contact">
+              <div class="home__email" style="margin-bottom: 10px">
+                <span>keming0325@gmail.com</span>
+              </div>
+              <div class="home__icon-box">
+                <div class="home__icon">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100004053970242"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></a>
+                </div>
+                <div class="home__icon">
+                  <a href="https://github.com/KmingLyu">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </div>
+                <div class="home__icon">
+                  <a href="https://www.linkedin.com/in/keminglyu"
+                    ><i class="fa fa-linkedin"></i
+                  ></a>
+                </div>
+                <div class="home__icon">
+                  <a href="mailto:keming0325@gmail.com"
+                    ><i class="fa-regular fa-envelope"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section--experiences" id="experience">
+        <div class="section__inner">
+          <h2 class="section__title">學經歷</h2>
+          <div class="section__content">
+            <div class="timeline">
+              <!-- 第一個事件 -->
+              <div class="timeline__event">
+                <div class="timeline__date">2017.09 - 2021.06</div>
+                <div class="timeline__date">
+                  <h3>中興大學 動物科學系</h3>
+                </div>
+              </div>
+              <!-- 第二個事件 -->
+              <div class="timeline__event">
+                <div class="timeline__date">2021.09 - 2024.01</div>
+                <div class="timeline__content">
+                  <h3>長庚大學 資訊工程學系 碩士</h3>
+                </div>
+              </div>
+              <div class="timeline__event">
+                <div class="timeline__date">2022.08 - 2024.01</div>
+                <div class="timeline__content">
+                  <h3>長庚大學 資訊工程學系 兼任研究助理</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section--publish" id="publish">
+        <div class="section__inner">
+          <h2 class="section__title">發表</h2>
+          <div class="section__content">
+            <h3 class="section__publish-category">碩士論文</h3>
+            <div class="section__publish-item">
+              <p>
+                <a
+                  href="https://thesis.lib.cgu.edu.tw/detail/33615d87dda5fed3f798a9944163804f/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  以 Whisper 模型多語言語音辨識與分段之即時語者分段標記系統<br />
+                  Real-Time Speaker Diarization System Based on Whisper
+                  Multilingual Speech Recognition and Segmentation
+                </a>
+              </p>
+            </div>
+            <h3 class="section__publish-category">期刊</h3>
+            <div class="section__publish-item">
+              <p>
+                <a
+                  href="https://peerj.com/articles/cs-1973/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Real-time multilingual speech recognition and speaker
+                  diarization system based on Whisper segmentation
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section--skills" id="skill">
+        <div class="section__inner">
+          <h2 class="section__title">技能</h2>
+          <div class="section__content">
+            <div class="skills">
+              <div class="skills__item">
+                <h3>人工智慧與深度學習</h3>
+                <ul>
+                  <li>語音辨識</li>
+                  <li>語者分段標記 (Speaker Diarization)</li>
+                  <li>自然語言處理</li>
+                  <li>深度學習模型設計與訓練</li>
+                </ul>
+              </div>
+              <div class="skills__item">
+                <h3>網頁開發</h3>
+                <ul>
+                  <li>前端：HTML, CSS, JavaScript</li>
+                  <li>後端：Python Flask, Node.js</li>
+                  <li>資料庫處理：MySQL, Firebase, MongoDB</li>
+                </ul>
+              </div>
+              <div class="skills__item">
+                <h3>系統架構與部署</h3>
+                <ul>
+                  <li>Linux 系統</li>
+                  <li>Docker 容器化技術</li>
+                  <li>AI 服務架設與部署</li>
+                  <li>微服務架構設計</li>
+                  <li>後端排程系統設計</li>
+                  <li>任務隊列管理 (Celery)</li>
+                  <li>定時任務排程 (Cron jobs)</li>
+                </ul>
+              </div>
+            </div>
+            <!-- <div class="skills__category" style="display: none">
+              <h3>移動應用開發</h3>
+              <ul>
+                <li>Android 手機應用程式開發</li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="section section--programming" id="programming">
+        <div class="section__inner">
+          <div class="section__title">
+            <h2>程式語言</h2>
+          </div>
+          <div class="section__content">
+            <ul>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>C</li>
+              <li>SQL</li>
+              <li>Java</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section section--achievements" id="achievements">
+        <div class="section__inner">
+          <div class="section__title">
+            <h2>成就與認證</h2>
+          </div>
+          <div class="section__content">
+            <ul>
+              <li>多益藍色證書 (795 分)</li>
+              <li>大學生程式能力檢定 CPE 4 題 (4.5%)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section section--projects" id="project">
+        <div class="section__inner">
+          <h2 class="section__title">作品集</h2>
+          <div class="section__content">
+            <div class="projects">
+              <!-- 即時多語言語音辨識與語者分段標記系統 -->
+              <div class="projects__item">
+                <a
+                  href="https://github.com/KmingLyu/real-time-speaker-diarization-asr.git"
+                >
+                  <img
+                    src="https://github.com/KmingLyu/real-time-speaker-diarization-asr/raw/main/rt_asr_sd_demo.gif"
+                    alt="項目圖片"
+                    class="projects__image"
+                  />
+                  <h3 class="projects__title">
+                    即時多語言語音辨識與語者分段標記系統
+                  </h3>
+                  <div class="projects__description">
+                    一個能夠即時識別不同語者並辨識其說話內容的系統。
+                  </div>
+                  <div class="projects__technologies">
+                    <span class="tag">Python</span>
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">OpenAI Whisper</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                  </div>
+                </a>
+              </div>
+              <!-- line bot -->
+              <!-- <div class="projects__item" style="display: none">
+                <img
+                  src="images/bg01.jpg"
+                  alt="項目圖片"
+                  class="projects__image"
+                />
+                <div class="projects__title">Line Bot</div>
+                <h3 class="projects__description">
+                  使用Line API開發的聊天機器人，提供各種便捷服務。
+                </h3>
+                <div class="projects__technologies">
+                  <span class="tag">Python</span>
+                  <span class="tag">Flask</span>
+                  <span class="tag">Line API</span>
+                  <span class="tag">MongoDB</span>
+                </div>
+              </div> -->
+              <!-- 長庚大學尾牙 -->
+              <div class="projects__item">
+                <a href="https://github.com/KmingLyu/cgu-prizesystem2023.git">
+                  <img
+                    src="https://github.com/KmingLyu/cgu-prizesystem2023/raw/main/static/images/select_winner.png"
+                    alt="項目圖片"
+                    class="projects__image"
+                  />
+                  <h3 class="projects__title">2023年長庚大學尾牙抽獎系統</h3>
+                  <div class="projects__description">
+                    建立完整資料庫紀錄獎品、參加者以及得獎名單，包含輸入獎品、輸入得獎人員以及查詢得獎名單等功能，
+                    取代傳統耗費人力的抽獎方式。
+                  </div>
+                  <div class="projects__technologies">
+                    <span class="tag">Python</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                  </div></a
+                >
+              </div>
+              <!-- 線上影片字幕生成器 -->
+              <div class="projects__item">
+                <a href="https://github.com/KmingLyu/asr-captioner.git">
+                  <img
+                    src="https://github.com/KmingLyu/asr-captioner/raw/main/asr-captioner.png"
+                    alt="項目圖片"
+                    class="projects__image"
+                  />
+                  <!-- <div class="projects__title"><h3 class="projects__title">線上影片字幕生成器</h3></div> -->
+                  <h3 class="projects__title">線上影片字幕生成器</h3>
+                  <div class="projects__description">
+                    上傳影片或youtube連結，運用先進的語音辨識與翻譯模型，自動生成字幕並翻譯成英文。
+                  </div>
+                  <div class="projects__technologies">
+                    <span class="tag">Python</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">OpenAI Whisper</span>
+                    <span class="tag">Celery</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                  </div>
+                </a>
+              </div>
+              <!-- 名畫搜尋資料庫 -->
+              <div class="projects__item">
+                <a
+                  href="https://github.com/KmingLyu/world-famous-paintings-search-system.git"
+                >
+                  <img
+                    src="https://github.com/KmingLyu/world-famous-paintings-search-system/raw/main/result.png"
+                    alt="項目圖片"
+                    class="projects__image"
+                  />
+                  <h3 class="projects__title">名畫搜尋資料庫</h3>
+                  <div class="projects__description">
+                    收錄世界著名繪畫作品，提供使用關鍵字、年份、繪畫尺寸以及圖片顏色等方式搜尋。
+                  </div>
+                  <div class="projects__technologies">
+                    <span class="tag">Python</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                  </div>
+                </a>
+              </div>
+              <!-- 古嚴寺youtube頻道影片資料庫 -->
+              <div class="projects__item">
+                <a href="https://github.com/KmingLyu/ksguyanytdb.git">
+                  <img
+                    src="https://github.com/KmingLyu/ksguyanytdb/raw/main/ksguyanytdb.png"
+                    alt="項目圖片"
+                    class="projects__image"
+                  />
+                  <h3 class="projects__title">古嚴寺youtube頻道影片資料庫</h3>
+                  <div class="projects__description">
+                    收錄古嚴寺youtube影片，使用關鍵字查詢影片與播放清單，以及該影片的字幕檔。字幕檔使用whisper語音辨識自動生成。
+                  </div>
+                  <div class="projects__technologies">
+                    <span class="tag">Python</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">SQL</span>
+                  </div>
+                </a>
+              </div>
+              <!-- 前端線上影片字幕產生器 -->
+              <div class="projects__item">
+                <a
+                  href="https://github.com/KmingLyu/frontend-automatic-subtitle-generator.git"
+                >
+                  <img
+                    src="https://github.com/KmingLyu/frontend-automatic-subtitle-generator/raw/main/images/demo2.png"
+                    alt="項目圖片"
+                    class="projects__image"
+                  />
+                  <h3 class="projects__title">前端線上影片字幕產生器</h3>
+                  <div class="projects__description">
+                    使用javascript串接openai-api進行語音辨識，不需使用後端伺服器即可完成影片字幕生成。
+                  </div>
+                  <div class="projects__technologies">
+                    <span class="tag">OpenAI Whisper</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- 更多作品連結 -->
+            <a
+              href="https://github.com/KmingLyu"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              >更多作品...</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>版權所有&copy; 2024 呂可名的網站</p>
+    </footer>
   </body>
 </html>
