@@ -151,8 +151,7 @@ ul {
   /* align-items: center; */
   position: relative;
   width: 80%;
-  height: 80%;
-  z-index: -1;
+  /* height: 80%; */
   padding: 30px;
 }
 
@@ -443,5 +442,46 @@ footer p {
 
   .home__intro p {
     font-size: 16px;
+  }
+}
+
+/* === 手機橫放模式 === */
+@media (max-width: 812px) and (orientation: landscape) {
+  /* 整體排版調整 */
+  .home__inner {
+    padding-top: 100px;
+  }
+
+  /* 文字大小調整 */
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .header {
+    padding: 15px 0;
+  }
+  .header__nav {
+    width: 350px;
+  }
+
+  .header__nav-item {
+    font-size: 16px;
+  }
+
+  /* 首頁介紹文字大小調整 */
+  .home__intro {
+    margin-bottom: 0;
+  }
+  .home__intro h1 {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  .home__intro p {
+    font-size: 14px;
   }
 }
