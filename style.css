@@ -446,7 +446,7 @@ footer p {
 }
 
 /* === 手機橫放模式 === */
-@media (max-width: 812px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
   /* 整體排版調整 */
   .home__inner {
     padding-top: 100px;
