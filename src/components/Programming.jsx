@@ -1,6 +1,6 @@
 import React from 'react';
 
-const languages = ['Python', 'JavaScript', 'C', 'SQL', 'Java'];
+const languages = ['Python', 'Golang', 'JavaScript', 'C', 'SQL', 'Java'];
 
 const Programming = () => (
   <div className="section section--programming" id="programming">
